@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+
+void push(int a);
+void pop();
+int top=-1;
+int stack[5];
+
+void show();
+int main(){
+	
+	push(10);
+	push(20);
+	push(30);
+	push(40);
+	push(50);
+//	push(60);
+	pop();
+//	show();
+	
+}
+void push(int a)	
+{
+	if(top== (5-1))
+	{
+		
+		printf("Stack is full");	
+	}
+	else{
+		top++;
+		stack[top]=a;
+		
+	}
+}
+
+void pop(){
+	if(top==-1)
+	{
+		printf("Stack is under flow ");
+	}
+	
+	else{
+		printf("poped value : %d",stack[top]);
+	}
+}
+
+void show(){
+	
+	int i;
+	for(i=top;i>=0;i--){
+		printf("%d ",stack[i]);
+		
+	}
+}
